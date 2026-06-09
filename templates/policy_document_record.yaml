@@ -1,0 +1,27 @@
+source_id: ""
+title: ""
+source_type: "pdf/html/text/json/csv"
+source_url: ""
+local_path: ""
+content_sha256: ""
+captured_at: ""
+authority_score: 0
+issuing_agency: ""
+jurisdiction: ""
+publication_date: ""
+effective_date: ""
+policy_action: ""
+target_population: ""
+treatment_definition: ""
+treatment_intensity: ""
+outcomes_mentioned: []
+timeline: []
+key_quotes: []
+extraction_warnings: []
+manual_verification:
+  publication_date_checked: false
+  effective_date_checked: false
+  coverage_checked: false
+  amendments_checked: false
+  repeal_checked: false
+  treatment_coding_checked: false

@@ -1,0 +1,10 @@
+# Optional heavier causal ML packages. Install only when needed.
+doubleml>=0.9
+econml>=0.15
+causalml>=0.15
+linearmodels>=5.0
+networkx>=3.0
+cvxpy>=1.4
+dowhy>=0.11
+pypdf>=4.0
+python-docx>=1.1

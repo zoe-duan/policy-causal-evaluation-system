@@ -1,0 +1,51 @@
+question: ""
+status: draft
+policy_event:
+  name: ""
+  jurisdiction: ""
+  event_date: ""
+  implementation_notes: ""
+  source_log: []
+unit_of_analysis: ""
+treatment:
+  variable: ""
+  timing_variable: ""
+  intensity_variable: ""
+  treated_definition: ""
+outcomes:
+  - name: ""
+    measurement_window: ""
+    source: ""
+estimand:
+  type: "ATT"
+  target_population: "treated units"
+  dynamic: true
+identification_strategy:
+  primary: ""
+  fallback: []
+  assumptions: []
+  comparison_group: ""
+data_requirements:
+  required_columns:
+    - unit_id
+    - time
+    - treated
+    - post
+    - outcome
+  pre_periods_minimum: 3
+  notes: ""
+diagnostics:
+  - "Pre-trend / lead coefficients"
+  - "Overlap or donor pool fit"
+robustness_checks:
+  - "Alternative time windows"
+  - "Placebo outcomes or placebo treatment dates"
+threats_to_validity:
+  - "Anticipation"
+  - "Spillovers"
+  - "Concurrent shocks"
+deliverables:
+  - "design_card.yaml"
+  - "analysis_plan.md"
+  - "data_dictionary.csv"
+  - "evaluation_report.md"

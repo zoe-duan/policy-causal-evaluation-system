@@ -1,0 +1,10 @@
+[project]
+name = "causal-policy-codex-system"
+version = "0.1.0"
+description = "Codex-native causal inference and policy evaluation workflow"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

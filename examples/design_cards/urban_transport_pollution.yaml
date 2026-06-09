@@ -1,0 +1,65 @@
+question: 某城市交通限行政策是否降低 PM2.5？
+status: draft
+policy_event:
+  name: 城市交通限行政策
+  jurisdiction: 示例城市
+  date_or_period: 第 20 个月开始
+  motivation: 减少拥堵与空气污染
+treatment:
+  definition: 处理城市在政策后实施交通限行
+  timing: before/after
+  assignment_mechanism: observational policy adoption
+  number_of_treated_units: multiple treated cities
+unit_of_analysis: city-month
+outcomes:
+  - name: pm25
+    measurement: 月平均 PM2.5
+    expected_direction: decrease
+estimand:
+  target: ATT
+  population: 实施限行政策的城市月份
+  interpretation: 政策实施后相对于未实施城市的平均污染变化
+identification_strategy:
+  primary_method: DID/event-study
+  secondary_methods:
+    - synthetic control for single-city case
+    - DML with rich confounders as sensitivity
+  assumptions:
+    - 平行趋势
+    - 没有同时间只影响处理城市的冲击
+    - 未限行城市没有被污染或交通溢出影响
+data_requirements:
+  structure: panel
+  sources:
+    - 城市空气质量监测
+    - 气象数据
+    - 交通政策公告
+  minimum_fields:
+    - city
+    - month
+    - treatment
+    - pm25
+    - weather_index
+diagnostics:
+  - 处理前趋势图
+  - event-study leads
+  - 政策前协变量平衡
+  - 不同对照组敏感性
+robustness_checks:
+  - placebo policy date
+  - placebo treated cities
+  - exclude neighboring cities
+  - alternative pollution outcomes
+  - add weather and city-specific trends
+threats_to_validity:
+  - 同期环保政策
+  - 气象冲击
+  - 相邻城市交通溢出
+  - 监测站点变化
+deliverables:
+  - design card
+  - analysis plan
+  - baseline DID estimates
+  - event-study graph/table
+  - robustness checklist
+  - policy memo

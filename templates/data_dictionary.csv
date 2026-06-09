@@ -1,0 +1,6 @@
+variable,type,required,description,source,notes
+unit_id,string,yes,Unit identifier,,
+time,date_or_int,yes,Time index,,
+treated,binary,yes,Whether unit is ever/currently treated,,
+post,binary,yes,Post-policy indicator,,
+outcome,numeric,yes,Primary outcome,,

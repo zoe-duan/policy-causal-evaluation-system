@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evaluation Report Metadata",
+  "type": "object",
+  "required": [
+    "study_slug",
+    "claim_strength",
+    "main_method",
+    "checks_run"
+  ],
+  "properties": {
+    "study_slug": {
+      "type": "string"
+    },
+    "claim_strength": {
+      "type": "string",
+      "enum": [
+        "strong",
+        "moderate",
+        "weak",
+        "design-only"
+      ]
+    },
+    "main_method": {
+      "type": "string"
+    },
+    "checks_run": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unresolved_risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

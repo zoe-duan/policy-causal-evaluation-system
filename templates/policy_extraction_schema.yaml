@@ -1,0 +1,22 @@
+source_id: string
+title: string
+issuer: string
+jurisdiction: string
+source_type: law|regulation|notice|implementation_rule|dataset|report|news_lead
+url_or_path: string
+publication_date: YYYY-MM-DD|null
+approval_date: YYYY-MM-DD|null
+effective_date: YYYY-MM-DD|null
+implementation_date: YYYY-MM-DD|null
+revision_or_expiry_date: YYYY-MM-DD|null
+affected_units:
+  - unit_type: city|province|firm|individual|school|hospital|vehicle|platform_account|other
+    inclusion_rule: string
+    exclusion_rule: string|null
+policy_instruments:
+  - subsidy|tax_fee|ban_restriction|standard|enforcement|information|procurement|other
+intensity_measure: string|null
+enforcement_mechanism: string|null
+data_mapping_keys: []
+evidence_quotes: []
+uncertainty: []

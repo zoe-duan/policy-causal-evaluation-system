@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Causal Policy Design Card",
+  "type": "object",
+  "required": [
+    "question",
+    "policy_event",
+    "unit_of_analysis",
+    "treatment",
+    "outcomes",
+    "estimand",
+    "identification_strategy",
+    "data_requirements",
+    "diagnostics",
+    "robustness_checks",
+    "threats_to_validity",
+    "deliverables"
+  ],
+  "properties": {
+    "question": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "ready_for_data",
+        "analysis",
+        "review",
+        "final"
+      ]
+    },
+    "policy_event": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "unit_of_analysis": {
+      "type": "string"
+    },
+    "treatment": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "outcomes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "estimand": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "identification_strategy": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "data_requirements": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "robustness_checks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "threats_to_validity": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "deliverables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

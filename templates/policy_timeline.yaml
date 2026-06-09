@@ -1,0 +1,19 @@
+policy_name: 待填写
+sources: []
+timeline:
+  announcement_date: null
+  approval_date: null
+  publication_date: null
+  effective_date: null
+  implementation_date: null
+  revision_or_expiry_date: null
+treatment_coding:
+  treated_units: []
+  comparison_units: []
+  intensity_variable: null
+  exemptions: []
+identification_implications:
+  anticipation: unknown
+  staggered_adoption: unknown
+  spillovers: unknown
+  concurrent_policies: []
