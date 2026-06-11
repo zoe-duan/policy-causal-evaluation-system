@@ -124,7 +124,9 @@ def event_study_coefficients(
 
     low, high = window
     data = df[[outcome, event_time, unit, time, treated_ever]].dropna().copy()
-    data = data[(data[event_time] >= low) & (data[event_time] <= high)].copy()
+    treated_mask = data[treated_ever].astype(bool)
+    in_window = (data[event_time] >= low) & (data[event_time] <= high)
+    data = data[(~treated_mask) | in_window].copy()
     terms: list[str] = []
     created: list[str] = []
     for k in range(low, high + 1):

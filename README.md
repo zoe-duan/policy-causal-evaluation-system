@@ -177,7 +177,15 @@ studies/<slug>/policy_documents/processed/policy_document_summary.md
 make demo
 ```
 
-这会生成一个合成的城市-月份面板数据，跑 DID/event-study 基线估计，并写出 `examples/outputs/demo_report.md`。
+这会生成一个合成的城市-月份面板数据，完整还原城市限行政策影响 PM2.5 的 demo 链路：raw trends、四格 DID 反事实、TWFE DID、event study、placebo/稳健性检查，并写出：
+
+```text
+examples/outputs/demo_report.md
+examples/outputs/demo_did_cells.csv
+examples/outputs/demo_event_study.csv
+examples/outputs/demo_robustness.csv
+examples/outputs/figures/*.png
+```
 
 
 ### E. 让 Codex 多代理完整评估

@@ -35,6 +35,8 @@ python scripts/causal_policy_cli.py validate-card studies/traffic-pm25/design_ca
 python scripts/run_demo_analysis.py
 ```
 
+`run_demo_analysis.py` 会生成完整端到端 demo：原始趋势图、四格 DID 反事实图、事件研究图、稳健性图，以及对应 CSV 中间表和 `examples/outputs/demo_report.md`。
+
 ## 重要边界
 
 Codex 可以快速生成研究设计、脚本和审查清单，但不能替代数据质量审计、制度背景验证、伦理审查和领域专家判断。任何政策建议都必须明确“可识别的因果效应”和“政策价值判断”之间的区别。

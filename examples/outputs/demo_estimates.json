@@ -1,4 +1,13 @@
 {
+  "metadata": {
+    "demo_data": true,
+    "n_cities": 24,
+    "n_months": 36,
+    "treated_cities": 6,
+    "treatment_start": 20,
+    "true_effect": -2.0,
+    "warning": "Synthetic demo data. Do not interpret as real policy evidence."
+  },
   "simple_did": {
     "method": "simple four-cell DID",
     "estimate": -1.7093879290526104,
@@ -13,8 +22,8 @@
   },
   "twfe": {
     "method": "TWFE DID baseline",
-    "estimate": -1.7653179941753618,
-    "standard_error": 0.19452606237600925,
+    "estimate": -1.765317994175322,
+    "standard_error": 0.19452606237600523,
     "n_obs": 864,
     "details": {
       "r_squared": 0.814209258343567,
